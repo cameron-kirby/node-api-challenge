@@ -29,6 +29,6 @@ server.get('/', (req, res) => {
 server.use('/api/projects', projectsRouter);
 server.use('/api/actions', actionsRouter);
 
-server.listen(4000, () => {
+server.listen(process.env.PORT || 4000, () => {
     console.log('\n*** Server Running on http://localhost:4000 ***\n');
 });
